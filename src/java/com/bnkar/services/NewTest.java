@@ -1,4 +1,4 @@
-package test.bnkar.test.bnkar.mod;
+package java.com.bnkar.services;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
@@ -8,7 +8,7 @@ public class NewTest {
   @Test
   public void f() {
 	  System.out.println("hello");
-	  System.out.println(System.getProperties());;
+	//  System.out.println(System.getProperties());;
 	  
   }
   @BeforeTest

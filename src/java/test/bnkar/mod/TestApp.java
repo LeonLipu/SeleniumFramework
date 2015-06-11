@@ -1,4 +1,4 @@
-package test.bnkar.mod;
+package java.test.bnkar.mod;
 
 
 
