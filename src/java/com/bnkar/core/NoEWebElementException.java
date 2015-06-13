@@ -1,4 +1,4 @@
-package java.com.bnkar.core;
+package bnkar.core;
 
 import org.openqa.selenium.NoSuchElementException;
 

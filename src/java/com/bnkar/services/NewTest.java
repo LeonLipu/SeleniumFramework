@@ -1,4 +1,4 @@
-package java.com.bnkar.services;
+package bnkar.services;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;

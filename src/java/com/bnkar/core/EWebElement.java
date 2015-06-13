@@ -1,4 +1,4 @@
-package java.com.bnkar.core;
+package bnkar.core;
 import java.util.ArrayList;
 import java.util.List;
 import org.openqa.selenium.By;
