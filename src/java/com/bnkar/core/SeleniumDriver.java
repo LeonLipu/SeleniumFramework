@@ -5,15 +5,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import bnkar.services.IO;
+
 public class SeleniumDriver {
 	public WebDriver driver;
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-		// WebDriver driver = new FirefoxDriver();
-		// driver.get("http:google.com");
-	new SeleniumDriver().getDriver("firefox").get("http://www.google.com/");;
+		IO io = new IO();
+		String url = (String) io.getValuefromPropertyFile("config.properties")
+				.get("url");
+
+		System.out.println(url);
 
 	}
 
@@ -21,13 +24,13 @@ public class SeleniumDriver {
 
 		switch (browserName.toLowerCase()) {
 		case "ie":
-			driver=new InternetExplorerDriver();
+			driver = new InternetExplorerDriver();
 			break;
 		case "firefox":
-			driver=new FirefoxDriver();
+			driver = new FirefoxDriver();
 			break;
 		case "chrome":
-			driver= new ChromeDriver();
+			driver = new ChromeDriver();
 			System.out.println("chrome");
 			break;
 		default:
