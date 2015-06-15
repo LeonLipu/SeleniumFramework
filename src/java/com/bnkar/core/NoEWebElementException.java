@@ -9,9 +9,7 @@ public class NoEWebElementException extends NoSuchElementException {
 	 */
 	private static final long serialVersionUID = 6364414656865502113L;
 
-	public NoEWebElementException(String reason) {
-		// TODO Auto-generated constructor stub
-		
+	public NoEWebElementException(String reason) {		
 		super(reason);
 	}
 

@@ -12,12 +12,6 @@ public class SeleniumDriver {
 
 	public static void main(String[] args) {
 
-		IO io = new IO();
-		String url = (String) io.getValuefromPropertyFile("config.properties")
-				.get("url");
-
-		System.out.println(url);
-
 	}
 
 	public WebDriver getDriver(String browserName) {
@@ -37,6 +31,17 @@ public class SeleniumDriver {
 			System.out.println("Browser(ie,firefox,chrome) not found ");
 
 		}
+		return driver;
+	}
+
+	public WebDriver initializeDriver() {
+		IO io = new IO();
+		String url = (String) io.loadPropertyFile("config.properties").get(
+				"url");
+		WebDriver driver = new SeleniumDriver().getDriver((String) io
+				.loadPropertyFile("config.properties").get("browser"));
+		driver.get(url);
+		driver.manage().window().maximize();
 		return driver;
 	}
 

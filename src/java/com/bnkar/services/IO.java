@@ -2,7 +2,6 @@ package bnkar.services;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -20,7 +19,7 @@ public class IO {
 		System.out.println(prop.get("url"));
 	}
 
-	public Properties getValuefromPropertyFile(String path) {
+	public Properties loadPropertyFile(String path) {
 		Properties prop = new Properties();
 		File file = new File(path);
 		FileInputStream stream;
