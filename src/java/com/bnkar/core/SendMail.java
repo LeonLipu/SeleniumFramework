@@ -1,3 +1,4 @@
+package bnkar.core;
 
 //set CLASSPATH=%CLASSPATH%;activation.jar;mail.jar
 
@@ -14,6 +15,8 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+
+import org.openqa.selenium.io.Zip;
 
 
 
