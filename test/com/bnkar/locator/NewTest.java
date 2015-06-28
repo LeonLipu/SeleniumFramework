@@ -13,7 +13,7 @@ public class NewTest {
   System.out.println("melody id no");
   System.out.println("it is my print statement");
   System.out.println(System.getProperty("exeFolder"));//mvn test -DexeFolder="something"
-	  System.out.println(path);
+  System.out.println(path);
   }
 
 	@BeforeTest
