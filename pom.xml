@@ -5,8 +5,8 @@
 	<artifactId>SeleniumFrameWork</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
-		<sourceDirectory>src</sourceDirectory>
-	
+		<sourceDirectory>.</sourceDirectory>
+
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -14,10 +14,8 @@
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>
-					  <includes>
-            <include>src/**/*.java</include>
-            <include>test/**/*.java</include>
-        </includes>
+					<include>src/**/*.java</include>
+                    <include>test/**/*.java</include>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -51,12 +49,12 @@
 			<version>2.16</version>
 			<type>pom</type>
 		</dependency>
-		
-		  <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.8</version>
-        </dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8</version>
+		</dependency>
 
 	</dependencies>
 
