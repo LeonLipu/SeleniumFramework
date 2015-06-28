@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="instances">
+	<test name="f">
+		<parameter name="configPath" value="./TestConfigs" />
+		<classes>
+			<class name="com.bnkar.locator.NewTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> 
