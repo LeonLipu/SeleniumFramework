@@ -1,6 +1,6 @@
 # SeleniumFramework
 
-This is boliler plate to set up test automation framework .
+This is boliler plate framework to set up test automation framework .
 
 In this framework ,no selenium code  get implimented.
 
