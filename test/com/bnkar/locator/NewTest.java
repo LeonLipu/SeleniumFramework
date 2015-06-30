@@ -1,5 +1,6 @@
 package com.bnkar.locator;
 
+import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
@@ -14,7 +15,7 @@ public class NewTest {
 		System.out.println("it is my print statement");
 		System.out.println(System.getProperty("exeFolder"));// mvn test
 															// -DexeFolder="something"
-		System.out.println(path);
+		System.out.println(path);//parameter from testng
 	}
 
 	@Test
@@ -24,7 +25,7 @@ public class NewTest {
 		System.out.println("melody id no");
 		System.out.println("it is my print statement");
 		System.out.println(System.getProperty("exeFolder"));// mvn test
-															// -DexeFolder="something"
+		Assert.assertEquals("hello", "hellpo");												// -DexeFolder="something"
 		System.out.println(path);
 	}
 
