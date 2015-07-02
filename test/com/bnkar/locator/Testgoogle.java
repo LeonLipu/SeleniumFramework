@@ -13,5 +13,6 @@ public class Testgoogle {
 		driver.get("http://www.google.com/");
 		GooglePage gp=CustomPageFactory.initElements(driver,GooglePage.class);
 		gp.searchbox.sendKeys("hello");
+		
 	}
 }
