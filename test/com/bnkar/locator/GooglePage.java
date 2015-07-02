@@ -7,14 +7,19 @@ import org.openqa.selenium.support.How;
 
 public class GooglePage {
 	final WebDriver driver;
-	
-	@FindBy(how =How.NAME,using="q")
+
+	@FindBy(how = How.NAME, using = "q")
 	WebElement searchbox;
-	
+
 	public GooglePage(WebDriver driver) {
-		this.driver=driver;
+		this.driver = driver;
 	}
-	
-	
+
+	public GooglePage entervalue() {
+		
+		
+        searchbox.sendKeys("something");
+		return new GooglePage(driver);
+	}
 
 }

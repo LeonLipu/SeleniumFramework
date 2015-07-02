@@ -14,7 +14,7 @@ public class SeleniumDriver {
 
 	}
 
-	public WebDriver getDriver(String browserName) {
+	private WebDriver getDriver(String browserName) {
 
 		switch (browserName.toLowerCase()) {
 		case "ie":
@@ -36,10 +36,8 @@ public class SeleniumDriver {
 
 	public WebDriver initializeDriver() {
 		IO io = new IO();
-		String url = (String) io.loadPropertyFile("config.properties").get(
-				"url");
-		WebDriver driver = new SeleniumDriver().getDriver((String) io
-				.loadPropertyFile("config.properties").get("browser"));
+		String url = (String) io.loadPropertyFile("config.properties").get("url");
+		WebDriver driver = new SeleniumDriver().getDriver((String) io.loadPropertyFile("config.properties").get("browser"));
 		driver.get(url);
 		driver.manage().window().maximize();
 		return driver;
