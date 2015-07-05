@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import bnkar.services.IO;
 
@@ -31,7 +32,11 @@ public class SeleniumDriver {
 			System.out.println("Browser(ie,firefox,chrome) not found ");
 
 		}
-		return driver;
+		EventFiringWebDriver Edriver =new EventFiringWebDriver(driver);
+		CustomWebdriverListener cwl=new CustomWebdriverListener();
+	
+		Edriver.register(cwl);
+		return Edriver;
 	}
 
 	public WebDriver initializeDriver() {
