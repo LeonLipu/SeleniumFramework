@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="instances">
+	<test name="NewTest">
+		<parameter name="configPath" value="./TestConfigs" />
+		<classes>
+			<class name="TestClient.Tests.TestFile" />
+		</classes>
+	</test>
+
+
+
+	<!-- Test -->
+	<!-- <test name="secondtestcase"> <parameter name="configPath" value="./TestConfigs" 
+		/> <classes> <class name="com.bnkar.locator.SecondTestCase" /> </classes> 
+		</test> --> <!-- Test -->
+
+</suite> 
