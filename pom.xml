@@ -15,7 +15,7 @@
 					<source>1.7</source>
 					<target>1.7</target>
 					<include>src/**/*.java</include>
-                    <include>test/**/*.java</include>
+					<include>test/**/*.java</include>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -54,6 +54,18 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.8</version>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.14</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>1.41</version>
 		</dependency>
 
 	</dependencies>
