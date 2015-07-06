@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="instances">
-	<test name="f">
+
+	<listeners>
+		<!-- <listener class-name="com.bnkar.locator.CustomExecutionListener" /> -->
+
+		<listener class-name="com.bnkar.locator.AnotatorForRetry" />
+
+	</listeners>
+	
+
+ 
+	<test name="NewTest">
 		<parameter name="configPath" value="./TestConfigs" />
 		<classes>
 			<class name="com.bnkar.locator.NewTest" />
 		</classes>
-	</test> <!-- Test -->
+	</test> 
+	 
+	
+	
+	<!-- Test -->
+<!-- 	<test name="secondtestcase">
+		<parameter name="configPath" value="./TestConfigs" />
+		<classes>
+			<class name="com.bnkar.locator.SecondTestCase" />
+		</classes>
+	</test> --> <!-- Test -->
+
 </suite> 

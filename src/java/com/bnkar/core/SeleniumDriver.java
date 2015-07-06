@@ -1,5 +1,6 @@
 package bnkar.core;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,6 +16,9 @@ public class SeleniumDriver {
 
 	}
 
+	
+
+	
 	private WebDriver getDriver(String browserName) {
 
 		switch (browserName.toLowerCase()) {
@@ -41,6 +45,7 @@ public class SeleniumDriver {
 
 	public WebDriver initializeDriver() {
 		IO io = new IO();
+		PropertyConfigurator.configure("log4j.properties");
 		String url = (String) io.loadPropertyFile("config.properties").get("url");
 		WebDriver driver = new SeleniumDriver().getDriver((String) io.loadPropertyFile("config.properties").get("browser"));
 		driver.get(url);
