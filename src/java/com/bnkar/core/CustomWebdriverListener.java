@@ -80,6 +80,8 @@ public class CustomWebdriverListener implements WebDriverEventListener{
 
 	@Override
 	public void beforeChangeValueOf(WebElement element, WebDriver driver) {
+		
+		log.info("Before changing  and tagname "+element.getTagName());
 		// TODO Auto-generated method stub
 		
 	}
@@ -87,6 +89,7 @@ public class CustomWebdriverListener implements WebDriverEventListener{
 	@Override
 	public void afterChangeValueOf(WebElement element, WebDriver driver) {
 		// TODO Auto-generated method stub
+		log.info("Before changing  and tagname "+element.getTagName());
 		
 	}
 
