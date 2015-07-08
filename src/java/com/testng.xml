@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="instances">
+
+	<listeners>
+		 <listener class-name="testnglistener.CustomExecutionListener" /> 
+
+		<!-- <listener class-name="com.bnkar.locator.AnotatorForRetry" /> -->
+
+	</listeners>
+	
+
 	<test name="NewTest">
 		<parameter name="configPath" value="./TestConfigs" />
 		<classes>

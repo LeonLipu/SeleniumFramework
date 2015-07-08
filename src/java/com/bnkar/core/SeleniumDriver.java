@@ -7,10 +7,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+import com.relevantcodes.extentreports.ExtentReports;
+
+import TestClient.Tests.TestFile;
 import bnkar.services.IO;
 
 public class SeleniumDriver {
 	public WebDriver driver;
+	private ExtentReports extent;
 
 	public static void main(String[] args) {
 

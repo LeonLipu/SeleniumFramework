@@ -22,6 +22,7 @@ public class NewTest {
 	
 	@Test
 	public void newsecondtest(){
+		Assert.assertEquals(false, true);
 		System.out.println("onesecondtestcase");
 	}
 

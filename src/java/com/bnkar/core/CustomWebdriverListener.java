@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
-public class CustomWebdriverListener implements WebDriverEventListener{
+public class CustomWebdriverListener implements WebDriverEventListener {
 
 	 static Logger log = Logger.getLogger(CustomWebdriverListener.class);
 	
