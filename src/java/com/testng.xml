@@ -2,7 +2,7 @@
 <suite name="Suite" parallel="instances">
 
 	<listeners>
-		 <listener class-name="testnglistener.CustomExecutionListener" /> 
+		 <listener class-name="testnglistener.CustomTestNGListener" /> 
 
 		<!-- <listener class-name="com.bnkar.locator.AnotatorForRetry" /> -->
 
@@ -12,7 +12,7 @@
 	<test name="NewTest">
 		<parameter name="configPath" value="./TestConfigs" />
 		<classes>
-			<class name="TestClient.Tests.TestFile" />
+			<class name="TestClient.Tests.Google" />
 		</classes>
 	</test>
 

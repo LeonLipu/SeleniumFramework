@@ -1,15 +1,30 @@
 package TestClient.Pages;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class Googlebasepage {
-	
-	@FindBy(how = How.NAME ,using="q")
+	final WebDriver driver;
+	@FindBy(how = How.NAME, using = "q")
 	WebElement searchbox;
 
-	
-	
+	@FindBy(how = How.XPATH, using = "//button[@value='Search']")
+	WebElement searchbutton;
+
+	public Googlebasepage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public Googlebasepage entervalue() {
+		searchbox.sendKeys("something");
+		return new Googlebasepage(driver);
+	}
+
+	public Googlebasepage doSearch() {
+		searchbutton.click();
+		return new Googlebasepage(driver);
+	}
+
 }
