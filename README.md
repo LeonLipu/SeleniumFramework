@@ -20,7 +20,7 @@ step to install
 
 4. mvn test
 
-make a star if it is helpful to you.happy automation
+make a star if it is helpful to you. happy automation
 Developer :
 Brahmananda kar
 (07569043685)

@@ -67,6 +67,11 @@
 			<artifactId>extentreports</artifactId>
 			<version>1.41</version>
 		</dependency>
+		<dependency>
+			<groupId>com.github.mifmif</groupId>
+			<artifactId>generex</artifactId>
+			<version>0.0.3</version>
+		</dependency>
 
 	</dependencies>
 

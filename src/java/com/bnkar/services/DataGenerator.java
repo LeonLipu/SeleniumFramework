@@ -1,18 +1,15 @@
 package bnkar.services;
 
-import org.apache.commons.lang3.time.DateUtils;
+import com.mifmif.common.regex.Generex;
 
 public class DataGenerator {
 
 	public static void main(String[] args) {
-
+		System.out.println(stringGenerator("\\d{28}"));;
 	}
 
-	public static String stringGenerator(String str) {
-
-		
-		
-		return str;
+	public static String stringGenerator(String str) {		
+		return new Generex(str).random();
 
 	}
 }

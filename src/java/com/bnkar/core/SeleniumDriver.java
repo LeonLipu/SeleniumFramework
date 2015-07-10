@@ -20,9 +20,6 @@ public class SeleniumDriver {
 
 	}
 
-	
-
-	
 	private WebDriver getDriver(String browserName) {
 
 		switch (browserName.toLowerCase()) {
@@ -40,9 +37,9 @@ public class SeleniumDriver {
 			System.out.println("Browser(ie,firefox,chrome) not found ");
 
 		}
-		EventFiringWebDriver Edriver =new EventFiringWebDriver(driver);
-		CustomWebdriverListener cwl=new CustomWebdriverListener();
-	
+		EventFiringWebDriver Edriver = new EventFiringWebDriver(driver);
+		CustomWebdriverListener cwl = new CustomWebdriverListener();
+
 		Edriver.register(cwl);
 		return Edriver;
 	}
@@ -50,8 +47,10 @@ public class SeleniumDriver {
 	public WebDriver initializeDriver() {
 		IO io = new IO();
 		PropertyConfigurator.configure("log4j.properties");
-		String url = (String) io.loadPropertyFile("config.properties").get("url");
-		WebDriver driver = new SeleniumDriver().getDriver((String) io.loadPropertyFile("config.properties").get("browser"));
+		String url = (String) io.loadPropertyFile("config.properties").get(
+				"url");
+		WebDriver driver = new SeleniumDriver().getDriver((String) io
+				.loadPropertyFile("config.properties").get("browser"));
 		driver.get(url);
 		driver.manage().window().maximize();
 		return driver;
