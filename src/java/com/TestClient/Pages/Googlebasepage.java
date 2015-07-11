@@ -17,8 +17,8 @@ public class Googlebasepage {
 		this.driver = driver;
 	}
 
-	public Googlebasepage entervalue() {
-		searchbox.sendKeys("something");
+	public Googlebasepage entervalue(String searchelement) {
+		searchbox.sendKeys(searchelement);
 		return new Googlebasepage(driver);
 	}
 

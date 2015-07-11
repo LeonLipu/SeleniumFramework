@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import TestClient.Pages.Googlebasepage;
@@ -13,25 +14,30 @@ public class Google {
 
 	public static WebDriver driver;
 
-
 	@BeforeTest
 	public void beforeTest() {
-		
+
 		SeleniumDriver selenium = new SeleniumDriver();
 		driver = selenium.initializeDriver();
 	}
 
-	@Test
-	public void test1() {
+	@Test(dataProvider="searchelement")
+	public void test1(int serial,String searchelement) {
 		Googlebasepage googlepage = PageFactory.initElements(driver,
 				Googlebasepage.class);
-		googlepage.entervalue();
+		googlepage.entervalue(searchelement);
 		googlepage.doSearch();
 	}
 
 	@Test
 	public void test2() {
 
+	}
+
+	@DataProvider(name = "searchelement")
+	public static Object[][] getSearchElement() {
+		return new Object[][] { { 1, "this" }, { 2, " is " }, { 3, " data " },
+				{ 4, " provider" } };
 	}
 
 	@AfterTest
