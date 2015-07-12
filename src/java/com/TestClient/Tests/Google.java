@@ -29,8 +29,13 @@ public class Google {
 		googlepage.doSearch();
 	}
 
-	@Test
-	public void test2() {
+	@Test(dataProvider="searchelement")
+	public void test2(int serial,String searchelement) {
+		
+			Googlebasepage googlepage = PageFactory.initElements(driver,
+					Googlebasepage.class);
+			googlepage.entervalue(searchelement);
+			googlepage.doSearch();
 
 	}
 
