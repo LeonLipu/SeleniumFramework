@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite" parallel="instances">
+<suite name="Suite" parallel="methods" thread-count="2" >
 
 	<listeners>
 		 <listener class-name="testnglistener.CustomTestNGListener" /> 
 
-		<!-- <listener class-name="com.bnkar.locator.AnotatorForRetry" /> -->
+		 <listener class-name="testnglistener.AnotatorForRetry" /> 
 
 	</listeners>
 	

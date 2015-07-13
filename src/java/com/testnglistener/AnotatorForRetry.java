@@ -14,6 +14,7 @@ public class AnotatorForRetry implements IAnnotationTransformer{
 	public void transform(ITestAnnotation annotation, Class testClass,
 			Constructor testConstructor, Method testMethod) {
 		
+		
 		IRetryAnalyzer ira=annotation.getRetryAnalyzer();
 		if(ira==null)
 			annotation.setRetryAnalyzer(Retrylistener.class);
