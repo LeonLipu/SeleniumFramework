@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import TestClient.Pages.Googlebasepage;
 import bnkar.core.SeleniumDriver;
+import bnkar.services.DataProviderClass;
 
 public class Google {
 
@@ -29,12 +30,12 @@ public class Google {
 		googlepage.doSearch();
 	}
 
-	@Test(dataProvider="searchelement")
-	public void test2(int serial,String searchelement) {
-		
+	@Test(dataProvider="dataset",dataProviderClass=DataProviderClass.class)
+	public void test2(String firstname ,String lastname,String rollno) {
+	
 			Googlebasepage googlepage = PageFactory.initElements(driver,
 					Googlebasepage.class);
-			googlepage.entervalue(searchelement);
+			googlepage.entervalue(firstname);
 			googlepage.doSearch();
 
 	}
@@ -48,7 +49,7 @@ public class Google {
 	@AfterTest
 	public void afterTest() {
 
-		driver.quit();
+	driver.quit();
 	}
 
 }

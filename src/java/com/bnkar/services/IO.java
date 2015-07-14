@@ -21,7 +21,7 @@ public class IO {
 		 * FileInputStream(file); prop.load(input);
 		 * System.out.println(prop.get("url"));
 		 */
-		new IO().getdataset();
+		new IO().getdataset("dataset.csv");
 	}
 
 	public Properties loadPropertyFile(String path) {
@@ -38,10 +38,10 @@ public class IO {
 		return prop;
 	}
 
-	public Object[][] getdataset() throws IOException {
+	public Object[][] getdataset(String fileuri) throws IOException {
 
 		Object[][] ob = new Object[1000][];
-		Reader in = new FileReader("dataset.csv");
+		Reader in = new FileReader(fileuri);
 		BufferedReader bfr = new BufferedReader(in);
 		String line;
 		int nooflinetoskip = 1, counter = 0, index = 0;

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite" parallel="methods" thread-count="2" >
+<!-- <suite name="Suite" parallel="methods" thread-count="2" > -->
+<suite name="Suite"  >
 
 	<listeners>
 		 <listener class-name="testnglistener.CustomTestNGListener" /> 
