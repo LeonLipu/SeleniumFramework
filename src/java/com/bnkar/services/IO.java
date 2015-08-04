@@ -24,6 +24,12 @@ public class IO {
 		new IO().getdataset("dataset.csv");
 	}
 
+	/**
+	 * This method will load the property file from location .
+	 * 
+	 * @param path
+	 * @return
+	 */
 	public Properties loadPropertyFile(String path) {
 		Properties prop = new Properties();
 		File file = new File(path);
@@ -38,6 +44,12 @@ public class IO {
 		return prop;
 	}
 
+	/**
+	 * Get all value form datasheet and put into double dimensional object array to give them data provider. 
+	 * @param fileuri
+	 * @return
+	 * @throws IOException
+	 */
 	public Object[][] getdataset(String fileuri) throws IOException {
 
 		Object[][] ob = new Object[1000][];
@@ -49,7 +61,7 @@ public class IO {
 		while ((line = bfr.readLine()) != null) {
 			if (nooflinetoskip <= counter)
 				ob[index++] = line.split(",");
-			 counter++;
+			counter++;
 		}
 		int nullcount = 999;
 

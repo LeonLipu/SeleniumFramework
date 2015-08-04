@@ -20,6 +20,11 @@ public class SeleniumDriver {
 
 	}
 
+	/**
+	 * Open browser with specific name 
+	 * @param browserName
+	 * @return
+	 */
 	private WebDriver getDriver(String browserName) {
 
 		switch (browserName.toLowerCase()) {
@@ -43,6 +48,12 @@ public class SeleniumDriver {
 		Edriver.register(cwl);
 		return Edriver;
 	}
+	
+	/**
+	 * This method will responsible  to initialize driver and navigate to url 
+	 * which written with configuration file. 
+	 * @return
+	 */
 
 	public WebDriver initializeDriver() {
 		IO io = new IO();

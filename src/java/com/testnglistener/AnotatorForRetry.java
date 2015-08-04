@@ -8,18 +8,18 @@ import org.testng.IRetryAnalyzer;
 import org.testng.annotations.IAnnotation;
 import org.testng.annotations.ITestAnnotation;
 
-public class AnotatorForRetry implements IAnnotationTransformer{
-
+public class AnotatorForRetry implements IAnnotationTransformer {
+	/**
+ * This method set retry Analyzer class 
+ */
 	@Override
 	public void transform(ITestAnnotation annotation, Class testClass,
 			Constructor testConstructor, Method testMethod) {
-		
-		
-		IRetryAnalyzer ira=annotation.getRetryAnalyzer();
-		if(ira==null)
+		IRetryAnalyzer ira = annotation.getRetryAnalyzer();
+		if (ira == null)
 			annotation.setRetryAnalyzer(Retrylistener.class);
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

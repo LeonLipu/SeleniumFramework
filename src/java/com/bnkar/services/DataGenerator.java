@@ -8,6 +8,11 @@ public class DataGenerator {
 		System.out.println(stringGenerator("\\d{28}"));;
 	}
 
+	/**
+	 * It will generate string depending upon regular expression 
+	 * @param str
+	 * @return
+	 */
 	public static String stringGenerator(String str) {		
 		return new Generex(str).random();
 
