@@ -13,11 +13,8 @@ if you want to set up framework from scratch ,this project is good boiler plate 
 
 step to install 
 1. git clone git@github.com:LeonLipu/SeleniumFramework.git
-
-2. install maven
-
+2. cd SeleniumFramework
 3. mvn install -Dskiptest
-
 4. mvn test
 
 make a star if it is helpful to you. happy automation
